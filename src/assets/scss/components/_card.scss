@@ -1,0 +1,153 @@
+@import "../colors";
+.card {
+  //overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: border 0.2s;
+  &-alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    color: #f7a65b;
+    padding: 3px 16px;
+    border-left: 1px solid #eef1f7;
+    border-bottom: 1px solid #eef1f7;
+    border-radius: 0 5px;
+  }
+  &-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #eef1f7;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    &-title {
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $dark;
+    }
+    &-description {
+      font-size: 12px;
+      line-height: 15px;
+      color: $gray;
+    }
+    &-action {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 35px;
+      &-progress {
+        flex: 1;
+      }
+      &-btn {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        background: #f5f8fa;
+        color: $gray;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+  &-content {
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s;
+  }
+}
+
+.card-dialog {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &-close {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    z-index: 1;
+    font-size: 18px;
+    color: rgba(20, 42, 85, 0.5);
+    cursor: pointer;
+  }
+  &-form {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 100%;
+    }
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 80px;
+      grid-row-gap: 24px;
+    }
+  }
+}
+
+.card-alt {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid transparent;
+  transition: border 0.2s;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #eef1f7;
+  }
+  &-user {
+    &-badge {
+      width: 40px;
+      height: 40px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      //&:nth-child(n-1) {
+      //  margin-left: -15px;
+      //}
+      &:not(:first-child) {
+        margin-left: -10px;
+      }
+      //&:hover {
+      //  z-index: 100;
+      //}
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+}

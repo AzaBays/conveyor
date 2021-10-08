@@ -1,0 +1,10 @@
+.doc-detail {
+  width: 898px;
+  &-active {
+    transform: translateX(0) scaleX(1) !important;
+  }
+  &-content {
+    border-top: 1px solid #E0E6ED;
+    height: calc(100% - 38px);
+  }
+}

@@ -1,0 +1,24 @@
+.custom-select {
+  display: flex;
+  align-items: center;
+}
+
+.filter-select {
+  //width: 250px;
+  //max-width: 250px;
+  position: relative;
+  //display: flex;
+  //align-items: center;
+  & .label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 900;
+    font-size: 12px;
+    color: #003171;
+    margin-left: 10px;
+    padding: 0 3px;
+    background: #ffffff;
+    transform: translateY(-50%);
+  }
+}

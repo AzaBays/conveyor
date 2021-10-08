@@ -1,0 +1,139 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$msb-front-primary: mat-palette($mat-indigo);
+$msb-front-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$msb-front-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$msb-front-theme: mat-light-theme((
+  color: (
+    primary: $msb-front-primary,
+    accent: $msb-front-accent,
+    warn: $msb-front-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($msb-front-theme);
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+// -------------------------       app       ------------------------- //
+.app {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  &-content {
+    width: 100%;
+    height: calc(100% - 60px);
+    //display: grid;
+    //grid-template-columns: 280px auto;
+    display: flex;
+    position: relative;
+  }
+  &-router-outlet {
+    width: calc(100% - 280px);
+    height: 100%;
+  }
+}
+// -------------------------       app       ------------------------- //
+
+// -------------------------      fonts      ------------------------- //
+@import "assets/scss/fonts";
+// -------------------------      fonts      ------------------------- //
+
+// -------------------------     sidebar     ------------------------- //
+@import "assets/scss/components/sidebar";
+// -------------------------     sidebar     ------------------------- //
+
+// -------------------------     header      ------------------------- //
+@import "assets/scss/components/header";
+// -------------------------     header      ------------------------- //
+
+// -------------------------       login     ------------------------- //
+@import "assets/scss/components/login";
+// -------------------------       login     ------------------------- //
+
+// -------------------------       page      ------------------------- //
+@import "assets/scss/components/page";
+// -------------------------       page      ------------------------- //
+
+// ------------------------- credit-conveyor ------------------------- //
+@import "assets/scss/components/credit-conveyor";
+// ------------------------- credit-conveyor ------------------------- //
+
+// -------------------------   search-page   ------------------------- //
+@import "assets/scss/components/search-page";
+// -------------------------   search-page   ------------------------- //
+
+// -------------------------  notifications  ------------------------- //
+@import "assets/scss/components/notifications";
+// -------------------------  notifications  ------------------------- //
+
+
+
+// -------------------------      select     ------------------------- //
+@import "assets/scss/components/select";
+// -------------------------      select     ------------------------- //
+
+// -------------------------    ng-select    ------------------------- //
+@import "assets/scss/ng-select/default.theme";
+// -------------------------    ng-select    ------------------------- //
+
+// -------------------------    doc-detail   ------------------------- //
+@import "assets/scss/components/doc-detail";
+// -------------------------    doc-detail   ------------------------- //
+
+// -------------------------    doc-history   ------------------------- //
+@import "assets/scss/components/doc-history";
+// -------------------------    doc-history   ------------------------- //
+
+// -------------------------   doc-performer  ------------------------- //
+@import "assets/scss/components/doc-performer";
+// -------------------------   doc-performer  ------------------------- //
+
+// -------------------  selecting-column-sidebar  -------------------- //
+@import "assets/scss/components/selecting-column";
+// -------------------  selecting-column-sidebar  -------------------- //
+
+// -------------------------     shared      ------------------------- //
+@import "assets/scss/components/shared";
+// -------------------------     shared      ------------------------- //
+
+// -------------------------   form-field    ------------------------- //
+@import "assets/scss/components/form-field";
+// -------------------------   form-field    ------------------------- //
+
+// -------------------------     table       ------------------------- //
+@import "assets/scss/components/table";
+// -------------------------     table       ------------------------- //
+
+// -------------------------  angular-my-dp  ------------------------- //
+@import "assets/scss/my-datepicker";
+// -------------------------  angular-my-dp  ------------------------- //
+
+// -------------------------  application    ------------------------- //
+@import "assets/scss/components/application";
+// -------------------------  application    ------------------------- //
+
+// -------------------------      card       ------------------------- //
+@import "assets/scss/components/card";
+// -------------------------      card       ------------------------- //

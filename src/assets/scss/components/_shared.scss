@@ -1,0 +1,1136 @@
+@import "../colors";
+
+// -------------------------  custom-checkbox  ------------------------- //
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $gray-border;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: $white;
+  transition: background 0.2s;
+  & i {
+    transform: scale(0);
+  }
+  &-checked {
+    background: $blue-action;
+    & i {
+      transform: scale(1);
+    }
+  }
+}
+// -------------------------  custom-checkbox  ------------------------- //
+
+// -------------------------   custom-toggle   ------------------------- //
+.custom-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  & input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    &:checked + .custom-toggle-track {
+      background: $green;
+    }
+    &:checked + .custom-toggle-track .custom-toggle-track-thumb {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.custom-toggle-track {
+  width: 30px;
+  height: 16px;
+  background: $gray-lighter;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.custom-toggle-track-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $white;
+  margin: 1px;
+  transition: transform 0.2s;
+  transform: translateX(0);
+}
+// -------------------------   custom-toggle   ------------------------- //
+
+// -------------------------         btn       ------------------------- //
+.btn {
+  min-width: 100px;
+  padding: 8px 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+//.btn-primary {
+//  background: $primary !important;
+//}
+//.btn-secondary {
+//  background: $gray !important;
+//}
+//.btn-dark {
+//  background: $dark !important;
+//}
+//.btn-dark-blue {
+//  background: $dark-blue !important;
+//}
+//.btn-success {
+//  background: $success !important;
+//}
+//.btn-danger {
+//  background: $danger !important;
+//}
+//.btn-info {
+//  background: $info !important;
+//}
+//.btn-gray {
+//  background: $gray !important;
+//}
+//.btn-accent {
+//  background: $accent !important;
+//}
+//.btn-accent-light {
+//  background: $accent-light !important;
+//}
+//.btn-white {
+//  background: #ffffff !important;
+//}
+//.btn-green {
+//  background: #8dbf42 !important;
+//}
+//.btn-indigo {
+//  background: $indigo !important;
+//}
+
+.btn-black {
+  background: $black !important;
+}
+.btn-white {
+  background: $white !important;
+}
+.btn-logo-main {
+  background: $logo-main !important;
+}
+.btn-logo-red {
+  background: $logo-red !important;
+}
+.btn-logo-gray {
+  background: $logo-gray !important;
+}
+.btn-dark {
+  background: $dark !important;
+}
+.btn-gray {
+  background: $gray !important;
+}
+.btn-gray-lighter {
+  background: $gray-lighter !important;
+}
+.btn-gray-light {
+  background: $gray-light !important;
+}
+.btn-gray-border {
+  background: $gray-border !important;
+}
+.btn-light {
+  background: $light !important;
+}
+.btn-red {
+  background: $red !important;
+}
+.btn-green {
+  background: $green !important;
+}
+.btn-yellow {
+  background: $yellow !important;
+}
+.btn-orange-light {
+  background: $orange-light !important;
+}
+.btn-blue {
+  background: $blue !important;
+}
+.btn-blue-action {
+  background: $blue-action !important;
+}
+// -------------------------         btn       ------------------------- //
+
+// -------------------------       sidebar     ------------------------- //
+//.page-sidebar {
+//  position: absolute;
+//  right: 0;
+//  top: 0;
+//  height: 100%;
+//  background: $white;
+//  border: 1px solid $gray-border;
+//  box-shadow: -8px 0px 12px rgba(0, 0, 0, 0.08);
+//  z-index: 9999;
+//  transform: translateX(110%) scaleX(0);
+//  transition: transform 0.4s;
+//  &-header {
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//    &-title {
+//      font-weight: bold;
+//      font-size: 20px;
+//      line-height: 24px;
+//      color: #05172e;
+//    }
+//    &-close {
+//      font-size: 16px;
+//      color: rgba(44, 48, 56, 0.5);
+//      cursor: pointer;
+//    }
+//    &-tabs {
+//      display: flex;
+//      align-items: center;
+//      &-tab {
+//        padding: 10px 20px;
+//        font-weight: 600;
+//        font-size: 14px;
+//        color: #2c3038;
+//        cursor: pointer;
+//        border: 1px solid transparent;
+//        border-radius: 8px 8px 0 0;
+//        position: relative;
+//        z-index: 1;
+//        top: 1px;
+//        &-active {
+//          transition: color 0.2s;
+//          border-color: #e0e6ed;
+//          border-bottom-color: #ffffff;
+//          color: #2a63f6;
+//          & .corner {
+//            width: 11px;
+//            height: 11px;
+//            position: absolute;
+//            bottom: -1px;
+//            background: #ffffff;
+//            z-index: 1;
+//            &::before {
+//              content: "";
+//              width: 16px;
+//              height: 16px;
+//              position: absolute;
+//              bottom: 0;
+//              border: 1px solid #e0e6ed;
+//            }
+//            &-left {
+//              left: -10px;
+//              &::before {
+//                left: -6px;
+//                border-radius: 0 0 8px 0;
+//                border-top: none;
+//                border-left: none;
+//              }
+//            }
+//            &-right {
+//              right: -10px;
+//              &::before {
+//                right: -6px;
+//                border-radius: 0 0 0 8px;
+//                border-top: none;
+//                border-right: none;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+// -------------------------       sidebar     ------------------------- //
+
+// --------------------------      font      -------------------------- //
+.ls-05 {
+  letter-spacing: 0.5px;
+}
+.ls-075 {
+  letter-spacing: 0.75px;
+}
+.ls-1 {
+  letter-spacing: 1px;
+}
+.ls-125 {
+  letter-spacing: 1.25px;
+}
+.ls-150 {
+  letter-spacing: 1.5px;
+}
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.text-normal {
+  font-weight: normal !important;
+}
+.text-medium {
+  font-weight: 500 !important;
+}
+.text-semibold {
+  font-weight: 600 !important;
+}
+.text-bold {
+  font-weight: bold !important;
+}
+.text-extrabold {
+  font-weight: 900 !important;
+}
+
+.text-10 {
+  font-size: 10px !important;
+}
+.text-12 {
+  font-size: 12px !important;
+}
+.text-14 {
+  font-size: 14px !important;
+}
+.text-16 {
+  font-size: 16px !important;
+}
+.text-18 {
+  font-size: 18px !important;
+}
+.text-20 {
+  font-size: 20px !important;
+}
+.text-22 {
+  font-size: 22px !important;
+}
+.text-24 {
+  font-size: 24px !important;
+}
+.text-26 {
+  font-size: 26px !important;
+}
+.text-28 {
+  font-size: 28px !important;
+}
+.text-30 {
+  font-size: 30px !important;
+}
+.text-32 {
+  font-size: 32px !important;
+}
+
+.lh-10 {
+  line-height: 10px !important;
+}
+.lh-12 {
+  line-height: 12px !important;
+}
+.lh-14 {
+  line-height: 14px !important;
+}
+.lh-16 {
+  line-height: 16px !important;
+}
+.lh-18 {
+  line-height: 18px !important;
+}
+.lh-20 {
+  line-height: 20px !important;
+}
+.lh-22 {
+  line-height: 22px !important;
+}
+.lh-24 {
+  line-height: 24px !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+.text-align-left {
+  text-align: left !important;
+}
+.text-align-right {
+  text-align: right !important;
+}
+
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-overflow-nowrap {
+  white-space: nowrap;
+}
+
+//.text-primary {
+//  color: $primary !important;
+//}
+//.text-secondary {
+//  color: $gray !important;
+//}
+//.text-dark {
+//  color: $dark !important;
+//}
+//.text-dark-blue {
+//  color: $dark-blue !important;
+//}
+//.text-success {
+//  color: $success !important;
+//}
+//.text-danger {
+//  color: $danger !important;
+//}
+//.text-info {
+//  color: $info !important;
+//}
+//.text-gray {
+//  color: $gray !important;
+//}
+//.text-accent {
+//  color: $accent !important;
+//}
+//.text-accent-light {
+//  color: $accent-light !important;
+//}
+//.text-white {
+//  color: #ffffff !important;
+//}
+//.text-green {
+//  color: #8dbf42 !important;
+//}
+//.text-indigo {
+//  color: $indigo !important;
+//}
+
+.text-black {
+  color: $black !important;
+}
+.text-white {
+  color: $white !important;
+}
+.text-logo-main {
+  color: $logo-main !important;
+}
+.text-logo-red {
+  color: $logo-red !important;
+}
+.text-logo-gray {
+  color: $logo-gray !important;
+}
+.text-dark {
+  color: $dark !important;
+}
+.text-gray {
+  color: $gray !important;
+}
+.text-gray-lighter {
+  color: $gray-lighter !important;
+}
+.text-gray-light {
+  color: $gray-light !important;
+}
+.text-gray-border {
+  color: $gray-border !important;
+}
+.text-light {
+  color: $light !important;
+}
+.text-red {
+  color: $red !important;
+}
+.text-green {
+  color: $green !important;
+}
+.text-yellow {
+  color: $yellow !important;
+}
+.text-orange-light {
+  color: $orange-light !important;
+}
+.text-blue {
+  color: $blue !important;
+}
+.text-blue-action {
+  color: $blue-action !important;
+}
+
+//.bg-primary {
+//  background: $primary !important;
+//}
+//.bg-secondary {
+//  background: $gray !important;
+//}
+//.bg-dark {
+//  background: $dark !important;
+//}
+//.bg-dark-blue {
+//  background: $dark-blue !important;
+//}
+//.bg-success {
+//  background: $success !important;
+//}
+//.bg-danger {
+//  background: $danger !important;
+//}
+//.bg-info {
+//  background: $info !important;
+//}
+//.bg-gray {
+//  background: $gray !important;
+//}
+//.bg-accent {
+//  background: $accent !important;
+//}
+//.bg-accent-light {
+//  background: $accent-light !important;
+//}
+//.bg-white {
+//  background: #ffffff !important;
+//}
+//.bg-green {
+//  background: #8dbf42 !important;
+//}
+//.bg-indigo {
+//  background: $indigo !important;
+//}
+
+.bg-none {
+  background: none !important;
+}
+.bg-black {
+  background: $black !important;
+}
+.bg-white {
+  background: $white !important;
+}
+.bg-logo-main {
+  background: $logo-main !important;
+}
+.bg-logo-red {
+  background: $logo-red !important;
+}
+.bg-logo-gray {
+  background: $logo-gray !important;
+}
+.bg-dark {
+  background: $dark !important;
+}
+.bg-gray {
+  background: $gray !important;
+}
+.bg-gray-lighter {
+  background: $gray-lighter !important;
+}
+.bg-gray-light {
+  background: $gray-light !important;
+}
+.bg-gray-border {
+  background: $gray-border !important;
+}
+.bg-light {
+  background: $light !important;
+}
+.bg-red {
+  background: $red !important;
+}
+.bg-green {
+  background: $green !important;
+}
+.bg-yellow {
+  background: $yellow !important;
+}
+.bg-orange-light {
+  background: $orange-light !important;
+}
+.bg-blue {
+  background: $blue !important;
+}
+.bg-blue-action {
+  background: $blue-action !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+// --------------------------      font      -------------------------- //
+
+// --------------------------     tooltip    -------------------------- //
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  background: $logo-main;
+  border-radius: 2px;
+  font-size: 12px;
+  color: $white;
+  padding: 7px;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: $logo-main;
+    border-radius: 1px;
+  }
+}
+.tooltip-top {
+  left: 50%;
+  bottom: 100%;
+  transform: scaleY(0) translateX(-50%);
+  transition: transform 0.2s;
+  &::before {
+    top: 100%;
+    left: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+}
+.tooltip-top-active {
+  transform: scaleY(1) translateX(-50%);
+}
+
+.mat-tooltip {
+  background: $logo-main !important;
+  color: $white !important;
+  //margin: 14px 6px !important;
+  font-family: "Commissioner", sans-serif;
+}
+// --------------------------     tooltip    -------------------------- //
+
+// --------------------------     dropdown   -------------------------- //
+.dropdown {
+  position: relative;
+  &:hover .dropdown-content {
+    transform: scale(1);
+  }
+  &-content {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 3px 0;
+    border: 1px solid #ebeff2;
+    border-radius: 5px;
+    transform-origin: left top;
+    transition: transform 0.2s;
+    transform: scale(0);
+    &-item {
+      padding: 5px 7px;
+      white-space: nowrap;
+      &:hover {
+        transition: background 0.2s;
+        background: #f9f9ff;
+        color: $dark !important;
+      }
+    }
+  }
+}
+// --------------------------     dropdown   -------------------------- //
+
+// --------------------------     notify     -------------------------- //
+.notify-popup {
+  position: fixed;
+  z-index: 999999;
+  right: 20px;
+  bottom: 20px;
+  background: $logo-main;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: $white;
+  border-radius: 3px;
+  animation: showPopup 3s linear 0.2s forwards;
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+@keyframes showPopup {
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+// --------------------------     notify     -------------------------- //
+
+// --------------------------   positions    -------------------------- //
+.position-relative {
+  position: relative !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.position-sticky {
+  position: sticky !important;
+}
+// --------------------------   positions    -------------------------- //
+
+// --------------------------   overflow     -------------------------- //
+.overflow {
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $gray-light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: opacify($logo-main, 0.6);
+    border-radius: 5px;
+  }
+}
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
+}
+// --------------------------   overflow     -------------------------- //
+
+// --------------------------    borders     -------------------------- //
+.border-all-1 {
+  border: 1px solid transparent;
+}
+.border-all-2 {
+  border: 2px solid transparent;
+}
+.border-all-3 {
+  border: 3px solid transparent;
+}
+.border-left-1,
+.border-x-1 {
+  border-left: 1px solid transparent;
+}
+.border-left-2,
+.border-x-2 {
+  border-left: 2px solid transparent;
+}
+.border-left-3,
+.border-x-3 {
+  border-left: 3px solid transparent;
+}
+.border-top-1,
+.border-y-1 {
+  border-top: 1px solid transparent;
+}
+.border-top-2,
+.border-y-2 {
+  border-top: 2px solid transparent;
+}
+.border-top-3,
+.border-y-3 {
+  border-top: 3px solid transparent;
+}
+.border-right-1,
+.border-x-1 {
+  border-right: 1px solid transparent;
+}
+.border-right-2,
+.border-x-2 {
+  border-right: 2px solid transparent;
+}
+.border-right-3,
+.border-x-3 {
+  border-right: 3px solid transparent;
+}
+.border-bottom-1,
+.border-y-1 {
+  border-bottom: 1px solid transparent;
+}
+.border-bottom-2,
+.border-y-2 {
+  border-bottom: 2px solid transparent;
+}
+.border-bottom-3,
+.border-y-3 {
+  border-bottom: 3px solid transparent;
+}
+.border-dashed-all-1 {
+  border: 1px dashed transparent;
+}
+.border-dashed-all-2 {
+  border: 2px dashed transparent;
+}
+.border-dashed-all-3 {
+  border: 3px dashed transparent;
+}
+.border-dashed-left-1,
+.border-dashed-x-1 {
+  border-left: 1px dashed transparent;
+}
+.border-dashed-left-2,
+.border-dashed-x-2 {
+  border-left: 2px dashed transparent;
+}
+.border-dashed-left-3,
+.border-dashed-x-3 {
+  border-left: 3px dashed transparent;
+}
+.border-dashed-top-1,
+.border-dashed-y-1 {
+  border-top: 1px dashed transparent;
+}
+.border-dashed-top-2,
+.border-dashed-y-2 {
+  border-top: 2px dashed transparent;
+}
+.border-dashed-top-3,
+.border-dashed-y-3 {
+  border-top: 3px dashed transparent;
+}
+.border-dashed-right-1,
+.border-dashed-x-1 {
+  border-right: 1px dashed transparent;
+}
+.border-dashed-right-2,
+.border-dashed-x-2 {
+  border-right: 2px dashed transparent;
+}
+.border-dashed-right-3,
+.border-dashed-x-3 {
+  border-right: 3px dashed transparent;
+}
+.border-dashed-bottom-1,
+.border-dashed-y-1 {
+  border-bottom: 1px dashed transparent;
+}
+.border-dashed-bottom-2,
+.border-dashed-y-2 {
+  border-bottom: 2px dashed transparent;
+}
+.border-dashed-bottom-3,
+.border-dashed-y-3 {
+  border-bottom: 3px dashed transparent;
+}
+.border-none {
+  border: none !important;
+}
+
+//.border-primary {
+//  border-color: $primary !important;
+//}
+//.border-secondary {
+//  border-color: $gray !important;
+//}
+//.border-dark {
+//  border-color: $dark !important;
+//}
+//.border-dark-blue {
+//  border-color: $dark-blue !important;
+//}
+//.border-success {
+//  border-color: $success !important;
+//}
+//.border-danger {
+//  border-color: $danger !important;
+//}
+//.border-info {
+//  border-color: $info !important;
+//}
+//.border-gray {
+//  border-color: $gray !important;
+//}
+//.border-accent {
+//  border-color: $accent !important;
+//}
+//.border-accent-light {
+//  border-color: $accent-light !important;
+//}
+//.border-white {
+//  border-color: #ffffff !important;
+//}
+//.border-green {
+//  border-color: #8dbf42 !important;
+//}
+//.border-indigo {
+//  border-color: $indigo !important;
+//}
+
+.border-invalid {
+  border-color: #ff4a4a !important;
+}
+.border-valid {
+  border-color: #32d78780 !important;
+}
+.border-black {
+  border-color: $black !important;
+}
+.border-white {
+  border-color: $white !important;
+}
+.border-logo-main {
+  border-color: $logo-main !important;
+}
+.border-logo-red {
+  border-color: $logo-red !important;
+}
+.border-logo-gray {
+  border-color: $logo-gray !important;
+}
+.border-dark {
+  border-color: $dark !important;
+}
+.border-gray {
+  border-color: $gray !important;
+}
+.border-gray-lighter {
+  border-color: $gray-lighter !important;
+}
+.border-gray-light {
+  border-color: $gray-light !important;
+}
+.border-gray-border {
+  border-color: $gray-border !important;
+}
+.border-light {
+  border-color: $light !important;
+}
+.border-red {
+  border-color: $red !important;
+}
+.border-green {
+  border-color: $green !important;
+}
+.border-yellow {
+  border-color: $yellow !important;
+}
+.border-orange-light {
+  border-color: $orange-light !important;
+}
+.border-blue {
+  border-color: $blue !important;
+}
+.border-blue-action {
+  border-color: $blue-action !important;
+}
+
+.radius-5 {
+  border-radius: 5px !important;
+}
+.radius-10 {
+  border-radius: 10px !important;
+}
+.radius-15 {
+  border-radius: 15px !important;
+}
+.radius-50 {
+  border-radius: 50% !important;
+}
+// --------------------------    borders     -------------------------- //
+
+// --------------------------   pagination   -------------------------- //
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $gray;
+  padding: 8px 20px;
+  border-radius: 10px;
+  &-arrows {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-left: 1px solid $gray-border;
+    &-disabled {
+      opacity: 0.5;
+    }
+    & span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background: $white;
+      border: 1px solid $gray-border;
+      border-radius: 5px;
+      color: $logo-main;
+    }
+  }
+}
+// --------------------------   pagination   -------------------------- //
+
+// --------------------------     status     -------------------------- //
+.status {
+  border-radius: 22px;
+  padding: 3px 6px;
+  font-size: 12px;
+  &-new {
+    background: #d3eff8;
+    color: #43617c;
+  }
+  &-sent {
+    color: #8a95aa;
+    background: #f8f9fb;
+  }
+  &-complete {
+    color: #0bb990;
+    background: #e8fff3;
+  }
+  &-working {
+    background: #fdf2c5;
+    color: #a77f4f;
+  }
+  &-denied {
+    background: #f8d3d3;
+    color: #7c4343;
+  }
+}
+// --------------------------     status     -------------------------- //
+
+// --------------------------   breadcrumbs  -------------------------- //
+.breadcrumbs {
+  &-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: $logo-main;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 16px 0;
+    padding-right: 30px;
+    color: $gray;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    & svg path {
+      stroke-width: 1;
+      stroke: $gray;
+      fill: $gray;
+    }
+    &::after {
+      content: "\e989";
+      font-family: icon;
+      font-size: 18px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    &:first-child {
+      font-size: 18px;
+      margin-right: 0;
+      padding-right: 15px;
+      &::after {
+        content: "";
+      }
+    }
+    &-current {
+      color: $logo-main;
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+// --------------------------   breadcrumbs  -------------------------- //
+
+// --------------------------  hover-effect  -------------------------- //
+.hover-effect-none {
+  &:hover {
+    background: none !important;
+    color: inherit !important;
+  }
+}
+.hover-color-accent-light {
+  &:hover {
+    transition: color 0.2s;
+    color: $blue-action !important;
+  }
+}
+// --------------------------  hover-effect  -------------------------- //
+
+// --------------------------     progress   -------------------------- //
+.custom-progress {
+  & .progress-outer {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: $gray-light !important;
+    border: none !important;
+  }
+  & .progress-inner {
+    min-width: 1% !important;
+    min-height: 6px !important;
+    font-size: 0 !important;
+  }
+}
+// --------------------------     progress   -------------------------- //
+
+// --------------------------     progress   -------------------------- //
+.mat-menu-panel.application-docs-item-menu {
+  max-width: 400px !important;
+}
+// --------------------------     progress   -------------------------- //
+
+// -------------------------- circular-chart -------------------------- //
+.circular-chart {
+  display: block;
+  //margin: 10px auto;
+  max-width: 20px;
+  max-height: 20px;
+}
+.circle-bg {
+  fill: none;
+  stroke: opacify($logo-main, 0.5);
+  stroke-width: 3.8;
+}
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circular-chart.default .circle {
+  stroke: rgba(16, 39, 74, 1);
+}
+// -------------------------- circular-chart -------------------------- //
